@@ -33,7 +33,7 @@ public class PostGraduateDataListener extends AnalysisEventListener<PostGraduate
     /**
      * 如果使用了spring,请使用这个构造方法。每次创建Listener的时候需要把spring管理的类传进来
      *
-     * @param demoDAO
+     * @param
      */
     public PostGraduateDataListener(PostGraduateDAO postGraduateDAO) {
         this.postGraduateDAO =postGraduateDAO ;
@@ -149,7 +149,7 @@ public class PostGraduateDataListener extends AnalysisEventListener<PostGraduate
     @Override
     public void doAfterAllAnalysed(AnalysisContext context) {
         // 这里也要保存数据，确保最后遗留的数据也存储到数据库
-        List cs = differentList("电子信息（软件工程）");
+        List cs = differentList("计算机科学与技术");
         Map computerScience = countFinal(cs);
         System.out.println(computerScience);
 
